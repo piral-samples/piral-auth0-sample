@@ -10,7 +10,11 @@ export function setup(api: PiletApi) {
       React.useEffect(() => {
         let active = true;
 
-        api.getProfile().then((profile) => active && setProfile(profile));
+        api.getAccessToken().then((token) => {
+          const [, payload] = token.split(".");
+          const profile = JSON.parse(atob(payload));
+          active && setProfile(profile);
+        });
 
         return () => {
           active = false;
