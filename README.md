@@ -6,6 +6,8 @@
 
 :zap: This sample demonstrates using `piral-oidc` to connect to an available auth0 identity provider.
 
+You can visit this demo at [auth0.samples.piral.cloud/](https://auth0.samples.piral.cloud/).
+
 ## Getting Started
 
 Install the dependencies:
